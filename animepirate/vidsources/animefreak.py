@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+from animepirate import config
 import re
 import requests
 
@@ -11,7 +12,7 @@ class VSParser:
         self.video = ''
 
     def parse(self):
-        if self.retries == 3:
+        if self.retries == config.MAX_RETRIES:
             print(f'[-] Unable to get video url: {self.url}')
             self.retries = 0
             return

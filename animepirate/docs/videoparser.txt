@@ -7,3 +7,7 @@ needed: https://twist.moe/a/kingdom/{NUM}
 AnimeFreak
 url: https://www.animefreak.tv/watch/fruits-basket-2nd-season/
 needed: https://www.animefreak.tv/watch/fruits-basket-2nd-season/episode/episode-{NUM}
+
+Gogoanime
+url: https://gogoanime.pro/anime/naruto-shippuden-dub-00zr/
+needed: https://gogoanime.pro/anime/naruto-shippuden-dub-00zr/ep-{NUM}

@@ -40,6 +40,8 @@ def create_dir(d):
 
 def download(ref, url, folder):
     fname = unquote(url).split('/')[-1].split('?')[0]
+    if fname == 'video.mp4':
+        fname = f'video-{ref.rpartition("/")[-1]}.mp4'
     fname = os.path.join(folder, fname)
     headers = {
         'Accept': '*/*',
