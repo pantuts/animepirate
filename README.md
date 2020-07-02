@@ -8,6 +8,7 @@ Currently supports:
 
 Todos:
 1. Add more sites.
+2. Logger
 
 ## Windows
 
@@ -32,9 +33,10 @@ sudo python setup.py install
 ## Usage
 
 ```
-animepirate -u URL -f 2 -t 3    # from episode 2 - 3
-animepirate -u URL -t 3         # will start from 1 up to 3
-animepirate -u URL -t 3 -c ~/Desktop/test   # save videos to ~/Desktop/test
+pirateanime -u URL -f 2 -t 3    # from episode 2 - 3
+pirateanime -u URL -t 3         # will start from 1 up to 3
+pirateanime -u URL -t 3 -c ~/Desktop/test   # save videos to ~/Desktop/test
+pirateanime -u URL # will download specific episode if detected
 ```
 
 ## Agreement
