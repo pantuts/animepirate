@@ -1,0 +1,9 @@
+References for VideoParser:_set_vidsources_parser.
+
+TwistMoe
+url: https://twist.moe/a/kingdom/
+needed: https://twist.moe/a/kingdom/{NUM}
+
+AnimeFreak
+url: https://www.animefreak.tv/watch/fruits-basket-2nd-season/
+needed: https://www.animefreak.tv/watch/fruits-basket-2nd-season/episode/episode-{NUM}

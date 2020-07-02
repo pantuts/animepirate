@@ -4,7 +4,7 @@ import re
 import requests
 
 
-class AnimeFreak:
+class VSParser:
     def __init__(self, url):
         self.url = url
         self.retries = 0

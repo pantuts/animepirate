@@ -7,7 +7,7 @@ import re
 import requests
 
 
-class TwistMoe:
+class VSParser:
     def __init__(self, url, driver):
         self.driver = driver
         self.url = url

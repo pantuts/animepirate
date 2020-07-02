@@ -55,7 +55,7 @@ def download(ref, url, folder):
         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'
     }
     session = requests.Session()
-    resp = session.get(url, headers=headers, stream=True)
+    resp = session.get(url, headers=headers, stream=True, verify=False)
     try:
         with tqdm.wrapattr(open(fname, 'wb'), 'write',
                     miniters=1, desc=os.path.basename(fname),
