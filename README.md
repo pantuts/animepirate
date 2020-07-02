@@ -5,6 +5,7 @@ Dumb anime videos downloader. Too dumb, yes!
 Currently supports:
 1. AnimeFreak
 2. TwistMoe
+3. Gogoanime
 
 Todos:
 1. Add more sites.
