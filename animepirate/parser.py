@@ -14,10 +14,11 @@ def ep_extractor(url):
 
 
 class VideoParser:
-    def __init__(self, url, from_episode=None, to_episode=None):
+    def __init__(self, url, from_episode=None, to_episode=None, is_movie=False):
         self.url = url
         self.from_episode = from_episode
         self.to_episode = to_episode
+        self.is_movie = is_movie
         self.driver = set_driver()
         self.videos = []
 
@@ -42,7 +43,11 @@ class VideoParser:
         vs = None
         for k, v in VIDSOURCES_URL_FORMATS.items():
             if k in self.url:
-                url = v.get('format').format(self.url, str(ep)) if ep else self.url
+                if self.is_movie:
+                    url = self.url
+                else:
+                    url = v.get('format').format(self.url, str(ep)) if ep else self.url
+
                 if v.get('driver'):
                     vs = v.get('vs').VSParser(url, self.driver)
                 else:

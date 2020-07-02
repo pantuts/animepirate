@@ -38,6 +38,7 @@ pirateanime -u URL -f 2 -t 3    # from episode 2 - 3
 pirateanime -u URL -t 3         # will start from 1 up to 3
 pirateanime -u URL -t 3 -c ~/Desktop/test   # save videos to ~/Desktop/test
 pirateanime -u URL # will download specific episode if detected
+pirateanime -u URL -m # download movie
 ```
 
 ## Agreement

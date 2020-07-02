@@ -26,7 +26,7 @@ class VSParser:
             self.driver.get(self.url)
             WebDriverWait(self.driver, 15).until(EC.presence_of_element_located((By.CLASS_NAME, 'episode-list')))
             try:
-                u1 = re.findall(r'(?=https).+\[[A-Z0-9]{8}\]\.mp4', self.driver.page_source)[0]
+                u1 = re.findall(r'(?=https).+\]\.mp4', self.driver.page_source)[0]
                 resp = requests.head(u1)
                 self.video = resp.headers.get('Location')
                 print(f'[+] Parsed: {self.video}')
