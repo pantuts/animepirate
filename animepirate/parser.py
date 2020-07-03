@@ -2,13 +2,17 @@
 
 from animepirate.config import URLS_EP, VIDSOURCES_URL_FORMATS
 from animepirate.utils import set_driver
+import re
 
 
 def ep_extractor(url):
     ep = None
     for k, v in URLS_EP.items():
         if k in url:
-            ep = url.split(v)[-1]
+            if type(v) == tuple:
+                ep = url.split(v[0])[-1].replace(v[1], '')
+            else:
+                ep = url.split(v)[-1]
             break
     return ep
 
@@ -46,7 +50,11 @@ class VideoParser:
                 if self.is_movie:
                     url = self.url
                 else:
-                    url = v.get('format').format(self.url, str(ep)) if ep else self.url
+                    if not v.get('format2'):
+                        url = v.get('format').format(self.url, str(ep)) if ep else self.url
+                    else:
+                        f2 = v.get('format2')
+                        url = re.sub(v.get('regex'), f2.format(str(ep)), self.url) if ep else self.url
 
                 if v.get('driver'):
                     vs = v.get('vs').VSParser(url, self.driver)

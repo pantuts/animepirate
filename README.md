@@ -6,6 +6,7 @@ Currently supports:
 1. AnimeFreak
 2. TwistMoe
 3. Gogoanime
+4. 9anime
 
 Todos:
 1. Add more sites.

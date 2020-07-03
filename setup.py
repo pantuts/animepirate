@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="animepirate-pantuts",
-    version="0.1.3",
+    version="0.1.4",
     author="Nick Bien",
     author_email="pantuts@gmail.com",
     description="Dumb anime videos downloader.",
