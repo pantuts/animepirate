@@ -18,12 +18,12 @@ def ep_extractor(url):
 
 
 class VideoParser:
-    def __init__(self, url, from_episode=None, to_episode=None, is_movie=False):
+    def __init__(self, url, from_episode=None, to_episode=None, is_movie=False, gui=False):
         self.url = url
         self.from_episode = from_episode
         self.to_episode = to_episode
         self.is_movie = is_movie
-        self.driver = set_driver()
+        self.driver = set_driver(gui)
         self.videos = []
 
     def parse(self):

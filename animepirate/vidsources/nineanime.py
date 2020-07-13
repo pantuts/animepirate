@@ -21,7 +21,7 @@ class VSParser:
         if self.retries == config.MAX_RETRIES:
             print(f'[-] Unable to get video url: {self.url}')
             self.retries = 0
-            return
+            return self.video
 
         try:
             print(f'[+] Parsing video: {self.url}')
